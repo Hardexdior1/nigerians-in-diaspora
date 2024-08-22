@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+#hero{
+  background-image: url(./images/independence.jpg);
+
+}
+#bg2{
+  background-image: url(./images/busy.webp);
+
+}
+#bg3{
+  background-image: url(./images/nigerian2.jpg);
+background-size: contain;
+}
