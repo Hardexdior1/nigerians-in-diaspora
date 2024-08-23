@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import logo from "../../public/images/logo (1).png";
-import logo from "../images/Logo (1).png";
+import logo from "../images/logs.jpeg";
 import { Link } from "react-router-dom";
 const NavBar = () => {
   const [showNav, setShowNav] = useState(true);
@@ -93,7 +93,8 @@ const NavBar = () => {
             : "hidden md:flex bg-green-800 md:items-center md:justify-between md:px-20 py-6 shadow-lg duration-[300ms] text-white"
         }>
         <Link to="/">
-          <img src={logo} alt="logo" className="w-32" />{" "}
+        <img src={logo} alt="logo" className="w-20 h-auto" />
+
           {/* Adjust size if needed */}
         </Link>
         <ul className="flex gap-6 md:items-center md:justify-between">
@@ -138,6 +139,20 @@ const NavBar = () => {
               {/* </Link> */}
             </a>
           </li>
+
+          <li>
+            <Link
+              to="/team"
+              className={
+                active === "team"
+                  ? "text-yellow-300 font-bold"
+                  : "text-white font-bold md:text-gray-200"
+              }
+              onClick={() => setActive("team")}>
+             Team
+            </Link>
+          </li>
+          
           <li>
             <a href="#projects"  className={
                   active === "projects"
@@ -179,12 +194,13 @@ const NavBar = () => {
       <div
   className={
     showNav
-      ? "z-50 px-6 py-8 gap-4 h-full md:hidden"
-      : "z-50 px-6 py-8 gap-4 mb-40 h-full md:hidden"
+      ? "z-50 px-4 py-4 gap-4 bg-black h-full  md:hidden"
+      : "z-50 px-4 py-4 gap-4 mb-40 h-full bg-black md:hidden"
   }>
-  <nav className="flex items-center justify-between">
+  <nav className="flex items-center justify-between border">
     <Link to="/">
-      <img src={logo} alt="logo" />
+    <img src={logo} alt="logo" className="w-20 h-auto" />
+
     </Link>
     {showNav ? (
       <div
@@ -192,9 +208,9 @@ const NavBar = () => {
         onClick={() => {
           toggleNav();
         }}>
-        <div className="h-1 w-5 bg-black"></div>
-        <div className="h-1 w-6 bg-black"></div>
-        <div className="h-1 w-6 bg-black"></div>
+        <div className="h-1 w-5 bg-white"></div>
+        <div className="h-1 w-6 bg-white"></div>
+        <div className="h-1 w-6 bg-white"></div>
       </div>
     ) : (
       ""
@@ -285,6 +301,21 @@ const NavBar = () => {
           setShowNav(true);
         }}>
         Contact
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/team"
+        className={
+          active === "team"
+            ? "text-yellow-300 font-bold"
+            : "text-white font-bold md:text-gray-200"
+        }
+        onClick={() => {
+          setActive("team");
+          setShowNav(true);
+        }}>
+     Team
       </Link>
     </li>
     <li>

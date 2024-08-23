@@ -1,6 +1,6 @@
-import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,31 +9,55 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-8">
           <div className="flex flex-col">
             <h4 className="text-xl font-bold mb-2">Contact Us</h4>
-            <p>Email: <a href="mailto:info@example.com" className="underline">info@example.com</a></p>
+            <p>
+              Email:{" "}
+              <a href="mailto:info@example.com" className="underline">
+                info@example.com
+              </a>
+            </p>
             <p>Phone: +234 123 4567</p>
           </div>
           <div className="flex flex-col">
             <h4 className="text-xl font-bold mb-2">Quick Links</h4>
-            <a href="#about" className="hover:underline">About Us</a>
-            <a href="#blog" className="hover:underline">Blog</a>
-            <a href="#projects" className="hover:underline">Projects</a>
-            
-            <Link className="hover:underline" to="/contact">Contact</Link>
+            <a href="#about" className="hover:underline">
+              About Us
+            </a>
+            <a href="#blog" className="hover:underline">
+              Blog
+            </a>
+            <a href="#projects" className="hover:underline">
+              Projects
+            </a>
+
+            <Link className="hover:underline" to="/contact">
+              Contact
+            </Link>
           </div>
         </div>
         <div className="flex flex-col items-center space-y-4">
-          <p className="text-center text-sm">&copy; {new Date().getFullYear()} Nigerians in the Diaspora. All rights reserved.</p>
+          <p className="text-center text-sm">
+            &copy; {new Date().getFullYear()}Voice Of Nigerians in the Diaspora.
+            All rights reserved.
+          </p>
           <div className="flex space-x-4">
-            <a href="https://facebook.com" className="text-white hover:text-gray-300 transition duration-300">
+            <a
+              href="https://facebook.com"
+              className="text-white hover:text-gray-300 transition duration-300">
               <FaFacebook size={20} />
             </a>
-            <a href="https://twitter.com" className="text-white hover:text-gray-300 transition duration-300">
+            <a
+              href="https://twitter.com"
+              className="text-white hover:text-gray-300 transition duration-300">
               <FaTwitter size={20} />
             </a>
-            <a href="https://instagram.com" className="text-white hover:text-gray-300 transition duration-300">
+            <a
+              href="https://instagram.com"
+              className="text-white hover:text-gray-300 transition duration-300">
               <FaInstagram size={20} />
             </a>
-            <a href="https://linkedin.com" className="text-white hover:text-gray-300 transition duration-300">
+            <a
+              href="https://linkedin.com"
+              className="text-white hover:text-gray-300 transition duration-300">
               <FaLinkedin size={20} />
             </a>
           </div>
@@ -44,16 +68,6 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-
-
-
-
-
-
-
 
 // import React from "react";
 // import logo from "../images/Logo (2).png";

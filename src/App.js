@@ -16,6 +16,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
+import Team from "./Components/Team";
+
 const CountriesContext = createContext();
 
 function App() {
@@ -88,6 +90,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/team" element={<Team />} />
+
 
             <Route path="/Blog/:id" element={<BlogContent />} />
           </Routes>
