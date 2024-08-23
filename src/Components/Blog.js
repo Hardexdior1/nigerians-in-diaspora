@@ -25,7 +25,7 @@ const Blog = () => {
   
   return (
     <div>
-      <section className=" px-5 py-2  bg-[#F8F8FB] md:block px-20 py-20" id="blog" >
+      <section className="px-5 py-2  bg-[#F8F8FB] md:px-20 py-20" id="blog" >
         <center>
           <div className="flex items-center justify-center gap-1 font-bold" >
             <div className="bg-green-500 h-1 w-10"></div>
