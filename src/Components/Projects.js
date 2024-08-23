@@ -41,7 +41,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="py-10 px-5 bg-[#1E1E2F] text-white" id='projects'>
+    <div className="py-10 px-4 bg-[#1E1E2F] text-white" id='projects'>
       <h2 className="text-3xl font-bold text-center text-[#54A9CE] mb-8">
         Our Projects
       </h2>
