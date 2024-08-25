@@ -1,6 +1,15 @@
-import React from "react";
-
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once while scrolling
+      easing: 'ease-in-out', // Easing function for animations
+    });
+  }, []);
+
   const aboutInfo = [
     {
       title: "Our Mission",
@@ -24,13 +33,13 @@ const About = () => {
 
       <section className="bg-white text-gray-800 py-12 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-green-600 mb-8">
+          <h2 data-aos="flip-right" className="text-3xl md:text-4xl font-bold text-center text-green-600 mb-8">
             About Us
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             
 
-            <div className="space-y-6">
+            <div className="space-y-6" data-aos="fade-up">
               <h3 className="text-2xl font-semibold text-gray-700">
                 Who We Are
               </h3>
@@ -51,7 +60,7 @@ const About = () => {
 
             <div className="space-y-6">
               {aboutInfo.map((info, index) => (
-                <div
+                <div data-aos="zoom-out"
                   key={index}
                   className="cursor-pointer relative bg-gray-100 p-6 rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105 hover:shadow-lg border-l-4 border-transparent hover:border-green-600 hover:bg-green-50">
                   <h3 className="text-2xl font-semibold text-gray-700 mb-3 hover:text-green-600 transition-colors duration-300">
@@ -66,7 +75,7 @@ const About = () => {
           </div>
 
           <div className="mt-8 flex justify-center">
-            <button className="bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition duration-300">
+            <button data-aos="fade-up" className="bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition duration-300">
               Learn More About Us
             </button>
           </div>

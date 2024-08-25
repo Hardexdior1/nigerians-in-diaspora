@@ -50,11 +50,11 @@ const Reviews = () => {
               </div>
 
               <p className="text-[#4B4B59] text-center">
-                Dealing with patients from diverse backgrounds, effective
-                communication is paramount. The application has been nothing
-                short of revolutionary in transforming the way I connect with my
-                patients. It's become an indispensable tool in my daily
-                practice.
+                Staying connected to home has never been easier. This platform
+                has revolutionized how I keep up with everything happening in
+                Nigeria, making it an essential tool for me as a Nigerian living
+                abroad. It bridges the gap and ensures I’m always informed, no
+                matter where I am.
               </p>
             </div>
           </div>
@@ -79,10 +79,11 @@ const Reviews = () => {
               </div>
 
               <p className="text-[#4B4B59] text-center">
-                Teaching online presents unique challenges, but this app has
-                transformed the way I connect with students globally. Truly
-                inclusive learning environment. This makes lessons more
-                engaging, and my students appreciate the seamless experience.
+                As a Nigerian living abroad, staying informed about events back
+                home is crucial. This platform has been a game-changer, keeping
+                me connected and up-to-date with everything happening in
+                Nigeria. It’s an invaluable resource that makes me feel closer
+                to home, no matter the distance
               </p>
             </div>
           </div>

@@ -3,7 +3,8 @@ import blogs from "./BlogData";
 
 import Reviews from "./Reviews";
 import { Link } from "react-router-dom";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 const Blog = () => {
   const categories = [
     "All categories",
@@ -22,7 +23,13 @@ const Blog = () => {
   };
   const [color, setColor] = useState(categories[0]);
 
-  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once while scrolling
+      easing: 'ease-in-out', // Easing function for animations
+    });
+  }, []);
   return (
     <div>
       <section className="px-3 py-2  bg-[#F8F8FB] md:px-20 py-20" id="blog" >
@@ -33,7 +40,7 @@ const Blog = () => {
           </div>
 
           <div className="text-[#1E1E2F] text-2xl font-bold mt-6 md:text-3xl">
-            <h1>Insights And perspective </h1>
+            <h1 data-aos="flip-right">Insights And perspective </h1>
           </div>
         </center>
         {/* #54A9CE */}
@@ -84,7 +91,7 @@ const Blog = () => {
     <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {blog.map((post) => (
       
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105 hover:border-l-4 border-r-4 border-green-600">
+        <div data-aos="zoom-in" className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-105 hover:border-l-4 border-r-4 border-green-600">
     <img src={post.imageUrl} alt={post.title}  className="w-full  object-cover"/>
     <div className="p-4">
       <h2 className="text-lg font-bold mb-2">{post.title}</h2>

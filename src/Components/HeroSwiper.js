@@ -8,8 +8,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
+  
 const HeroSwiper = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once while scrolling
+      easing: 'ease-in-out', // Easing function for animations
+    });
+  }, []);
   return (
     <Swiper
       modules={[Autoplay]} // Add Autoplay module
@@ -21,8 +31,8 @@ const HeroSwiper = () => {
       }}
       loop={true}
       pagination={{ clickable: true }}>
-      <SwiperSlide>
-        <div class="relative bg-cover bg-center h-screen text-white" id="hero">
+      <SwiperSlide >
+        <div class="relative bg-cover bg-center h-screen text-white" id="hero" >
           <div class="absolute inset-0 bg-black bg-opacity-50"></div>
           <div class="container mx-auto px-4 h-full flex flex-col justify-center items-start relative z-10">
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
