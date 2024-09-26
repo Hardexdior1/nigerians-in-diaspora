@@ -1,29 +1,29 @@
-import image from "../images/Image.png"
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import joy from "../images/joy.jpeg"
+import emma from "../images/emmmanuel.jpeg"
+import blessing from "../images/blessing.jpeg"
+
+
 const Team= () => {
     const teamMembers = [
         {
-          name: "John Doe",
-          title: "CEO",
-          image: "/path/to/john-doe.jpg", // Add the path to the image
+          name: "Dr. Blessing Anyaiwe onyekachi",
+          title: "President/founder",
+          image: blessing, // Add the path to the image
         },
         {
-          name: "Jane Smith",
-          title: "COO",
-          image: "/path/to/jane-smith.jpg",
+          name: "Barr. Edeh Emmanuel Chizaram",
+          title: "Legal adviser",
+          image: emma,
         },
         {
-          name: "Michael Johnson",
-          title: "CTO",
-          image: "/path/to/michael-johnson.jpg",
+          name: "MRS JOY ONYEMAKONOR ODIAKA.",
+          title: " Secretary of the organisation",
+          image:joy,
         },
-        {
-          name: "Emily Davis",
-          title: "CFO",
-          image: "/path/to/emily-davis.jpg",
-        },
+       
       ];
       useEffect(() => {
         AOS.init({
@@ -33,12 +33,12 @@ const Team= () => {
         });
       }, []);
   return (
-    <div className="bg-green-800 py-12">
+    <div className="bg-green-800 py-12 px-6 md:px-0 border">
       <h2 className="text-center text-white text-4xl font-bold mb-8">Meet Our Team</h2>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto md:flex items-center justify-center gap-8">
         {teamMembers.map((member, index) => (
-          <div data-aos="zoom-out"  key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img src={image} alt={member.name} className="w-full  object-cover" />
+          <div data-aos="zoom-out"  key={index} className="w-full bg-white shadow-lg rounded-lg overflow-hidden mb-8">
+            <img src={member.image} alt={member.name} className="w-full  object-cover h-80" />
             <div className="p-6">
               <h3 className="text-lg font-bold text-green-900">{member.name}</h3>
               <p className="text-gray-700">{member.title}</p>
