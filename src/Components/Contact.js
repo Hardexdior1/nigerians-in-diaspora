@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import Swal from "sweetalert2";
 import AOS from 'aos';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { PiTiktokLogoLight } from "react-icons/pi";
+
 import 'aos/dist/aos.css'; // Import AOS styles
 const Contact = () => {
   useEffect(() => {
@@ -85,6 +88,28 @@ const Contact = () => {
             Send Message
           </button>
         </form>
+
+        <div className="flex space-x-4 items-center justify-center gap-4 bg-black py-4">
+            <a
+              href="https://www.facebook.com/profile.php?id=100088184146741&mibextid=ZbWKwL"
+              className="text-white hover:text-gray-300 transition duration-300">
+              <FaFacebook size={40} />
+            </a>
+           
+            <a
+              href="https://www.instagram.com/voice_ofnigeriansindiaspora?igsh=MTVyM3FvYWMzc3l0MQ=="
+              className="text-white hover:text-gray-300 transition duration-300">
+              <FaInstagram size={40} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@voicenigeriansindiaspora?_t=8pT1XDOHu8U&_r=1"
+              className="text-white hover:text-gray-300 transition duration-300">
+              <PiTiktokLogoLight size={40} />
+            </a>
+            
+
+           
+          </div>
       </div>
     </section>
   );

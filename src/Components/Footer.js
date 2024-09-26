@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+
 const Footer = () => {
   return (
     <footer className="bg-green-800 text-white py-12 px-4 md:px-8 lg:px-16">
@@ -12,10 +13,10 @@ const Footer = () => {
             <p>
               Email:{" "}
               <a href="mailto:info@example.com" className="underline">
-                info@example.com
+                voiceofnigeriansindiaspora@gmail.com
               </a>
             </p>
-            <p>Phone: +234 123 4567</p>
+            <p>Phone: +2349065904995</p>
           </div>
           <div className="flex flex-col">
             <h4 className="text-xl font-bold mb-2">Quick Links</h4>
@@ -36,30 +37,22 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-center space-y-4">
           <p className="text-center text-sm">
-            &copy; {new Date().getFullYear()}Voice Of Nigerians in the Diaspora.
+            &copy; {new Date().getFullYear()} Voice Of Nigerians in the Diaspora.
             All rights reserved.
           </p>
           <div className="flex space-x-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=100088184146741&mibextid=ZbWKwL"
               className="text-white hover:text-gray-300 transition duration-300">
               <FaFacebook size={20} />
             </a>
+           
             <a
-              href="https://twitter.com"
-              className="text-white hover:text-gray-300 transition duration-300">
-              <FaTwitter size={20} />
-            </a>
-            <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/voice_ofnigeriansindiaspora?igsh=MTVyM3FvYWMzc3l0MQ=="
               className="text-white hover:text-gray-300 transition duration-300">
               <FaInstagram size={20} />
             </a>
-            <a
-              href="https://linkedin.com"
-              className="text-white hover:text-gray-300 transition duration-300">
-              <FaLinkedin size={20} />
-            </a>
+           
           </div>
         </div>
       </div>
