@@ -93,7 +93,7 @@ const NavBar = () => {
             : "hidden md:flex bg-green-800 md:items-center md:justify-between md:px-20 py-6 shadow-lg duration-[300ms] text-white"
         }>
         <Link to="/">
-        <img src={logo} alt="logo" className="w-20 h-auto" />
+        <img src={logo} alt="logo" className="w-14 h-auto" />
 
           {/* Adjust size if needed */}
         </Link>
@@ -197,9 +197,9 @@ const NavBar = () => {
       ? "z-50 px-4 py-4 gap-4 bg-black h-full  md:hidden"
       : "z-50 px-4 py-4 gap-4 mb-40 h-full bg-black md:hidden"
   }>
-  <nav className="flex items-center justify-between border">
+  <nav className="flex items-center justify-between">
     <Link to="/">
-    <img src={logo} alt="logo" className="w-20 h-auto" />
+    <img src={logo} alt="logo" className="w-14 h-auto" />
 
     </Link>
     {showNav ? (
@@ -333,38 +333,4 @@ const NavBar = () => {
 };
 export default NavBar;
 
-// import React, { useState } from "react";
 
-// import { MdDelete } from 'react-icons/md';
-// import { FaBars } from 'react-icons/fa';
-// import "../Styles/Nav.css"
-// const Navbar = () => {
-//
-//   return <header className="px-12 py-6 relative md:static">
-// <nav className="nav">
-//   <Link to="/">
-//   <img src={logo} alt="logo-img" />
-//   </Link>
-
-//   <ul className="md:flex items-center gap-8 static sm:bg-black absolute">
-//     <li> <Link >Home</Link> </li>
-//
-//
-//
-//
-
-//   </ul>
-
-//   <div className="hidden md:block">
-//     <button className="bg-gray-200 rounded text-[#1e1e2f] px-6 py-2" >Get Started</button>
-//   </div>
-
-//   <div className="block md:hidden">
-//     <FaBars className="w-30 "/>
-//   </div>
-// </nav>
-
-//   </header>;
-// };
-
-// export default Navbar;

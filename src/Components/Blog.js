@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import blogs from "./BlogData";
-
-import Reviews from "./Reviews";
 import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 const Blog = () => {
+  
   const categories = [
     "All categories",
     ...new Set(blogs.map((item) => item.purpose)),
@@ -110,11 +109,7 @@ const Blog = () => {
 
    
 
-    
-
-     
-
-      <Reviews />
+  
     </div>
   );
 };

@@ -1,16 +1,10 @@
-import edu from "../images/busy.webp";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import education from "../images/education.jfif";
 import empowerment from "../images/empowerment.jfif";
 import grant from "../images/grant.webp";
 import medical from "../images/medical.jfif";
-
-
-// import Carousel from "react-multi-carousel";
-
-// import "react-multi-carousel/lib/styles.css";
 import rice from "../images/rice.jpg";
 const Projects = () => {
   const projects = [
@@ -52,29 +46,9 @@ const Projects = () => {
     },
   ];
 
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 4,
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 768, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
-//   <Carousel responsive={responsive}>
-  
+
 
  
-// </Carousel>
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration in milliseconds
@@ -114,7 +88,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Center the video */}
       </div>
     </div>
   );
